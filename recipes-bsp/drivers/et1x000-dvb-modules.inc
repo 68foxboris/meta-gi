@@ -6,7 +6,7 @@ LICENSE = "CLOSED"
 PV = "${KV}+${SRCDATE}"
 PR = "r2"
 
-SRC_URI = "http://gi-et.info/et1x000/${MACHINE}-drivers-${KV}-${GCCREV}-${SRCDATE}.zip"
+SRC_URI = "file://et1x000-drivers-4.1.37-6.2.0-20170918.zip"
 
 S = "${WORKDIR}"
 

@@ -4,7 +4,8 @@ MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
 KERNEL_MODULE_AUTOLOAD += "xfs"
 
 MACHINE_EXTRA_RRECOMMENDS = " \
-    gst-plugin-dvbmediasink \
+    gstreamer1.0-plugin-dvbmediasink \
+    gstreamer1.0-libav \
     ntfs-3g \
 "
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
@@ -14,11 +15,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS = "\
     kernel-module-cdfs \
     "
-
-MACHINE_EXTRA_RRECOMMENDS = " \
-    ${@base_contains("GST_VERSION", "1.0", "gstreamer1.0-plugin-dvbmediasink", "gst-plugin-dvbmediasink", d)} \
-    "
-
 
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "armv7ahf-neon"
